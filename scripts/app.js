@@ -34,20 +34,15 @@ angular
 
 
 angular.module('ehughestaylorApp')
-.controller('PhoneListCtrl', function ($scope){
-  $scope.phones = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.',
-     'age': 1},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.',
-     'age': 2},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.',
-     'age': 3}    
-  ];
-  // default valueå
+.controller('PhoneListCtrl', ['$scope', '$http', function ($scope, $http){
+  // the http service returns a promis object with a success method.  We call this method to handle
+  // the asychronous response and assign the phone data to the scope controlled by this controller as a model called phones
+  // Angular detects the JSON response and parses it for us
+  $http.get('phones/phones.json').success(function(data){
+    $scope.phones = data;
+  });
+  // default value
   $scope.orderProp = 'age';
-});
+}]);
 
 
