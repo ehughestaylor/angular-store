@@ -22,40 +22,9 @@
 
     <!-- example to show that since this is not within the phone list controller that it does not have the same scope -->
     <!-- end example -->
-<<<<<<< HEAD
-    <div ng-controller="PhoneListCtrl" class="container-fluid">
-      <div class="row">
-        <div class="col-md-2">
-          <!-- Siderbar content -->
-          Search: <input ng-model="query"><br>
-          Sort By:
-          <select ng-model="orderProp">
-            <option value="name">Alphabetical</option>
-            <option value="age">Newest</option>
-          </select>
-            <p>Total number of phones: {{phones.length}}</p>
-        </div>
-        <div class="col-md-10">
-          <!-- body contents -->
-          <section id="phoneList">
-            <ul class="phones">
-              <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
-                <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-                <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-                <p>{{phone.snippet}}</p>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </div>
-      <!-- For Example Purposes -->
-<!--  <p>{{query}}</p>
-      <p>{{orderProp}}</p>
-      <pre>{{phones | filter:query | orderBy:orderProp | json}}</pre> -->
-=======
+
     <div class="view-container">
       <div ng-view class="view-frame"></div>
->>>>>>> development
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
