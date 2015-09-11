@@ -21,6 +21,9 @@ body{
       text-align: center;
     }
 }
+.phone{
+  width: 100%;
+}
 #sidebar{
   text-align: left;
   background: white;
@@ -32,7 +35,32 @@ body{
   ul{
     list-style-type: none;
   }
-
+}
+.detail-wrapper{
+  background: white;
+  p,h1{
+    background: white;
+    margin:0 auto;
+  }
+}
+.phone-thumbs{
+  background: white;
+  text-align: center;
+  margin: 0 auto;
+  li{
+    display: inline-block;
+    img{
+      height: 150px;
+      cursor: pointer;
+    }
+  } 
+}
+.specs{
+  background: white;
+  li{
+    list-style-type: none;
+    display: inline-block;
+  }
 }
 .browsehappy {
   margin: 0.2em 0;

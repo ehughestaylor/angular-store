@@ -13,6 +13,9 @@ body {
     font-size: 1.4em;
     text-align: center; }
 
+.phone {
+  width: 100%; }
+
 #sidebar {
   text-align: left;
   background: white;
@@ -23,6 +26,28 @@ body {
   padding-top: 1em; }
   #sidebar ul {
     list-style-type: none; }
+
+.detail-wrapper {
+  background: white; }
+  .detail-wrapper p, .detail-wrapper h1 {
+    background: white;
+    margin: 0 auto; }
+
+.phone-thumbs {
+  background: white;
+  text-align: center;
+  margin: 0 auto; }
+  .phone-thumbs li {
+    display: inline-block; }
+    .phone-thumbs li img {
+      height: 150px;
+      cursor: pointer; }
+
+.specs {
+  background: white; }
+  .specs li {
+    list-style-type: none;
+    display: inline-block; }
 
 .browsehappy {
   margin: 0.2em 0;
