@@ -15,7 +15,10 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'phonecatFilters',
+    'phonecatServices', 
+    'phonecatAnimations'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,12 +30,18 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
+      .when('/phones/:phoneId', {
+        templateUrl: 'partials/phone-detail.html',
+        controller: 'PhoneDetailCtrl'
+      })
+      .when('/phones', {
+        templateUrl: 'partials/phone-list.html',
+        controller: 'PhoneListCtrl'
       });
   });
 
 
+<<<<<<< HEAD
 angular.module('ehughestaylorApp')
 .controller('PhoneListCtrl', ['$scope', '$http', function ($scope, $http){
   // the http service returns a promis object with a success method.  We call this method to handle
@@ -46,5 +55,7 @@ angular.module('ehughestaylorApp')
   // default value
   $scope.orderProp = 'age';
 }]);
+=======
+>>>>>>> development
 
 
