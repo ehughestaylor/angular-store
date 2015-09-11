@@ -9,8 +9,14 @@
  */
 
 angular.module('ehughestaylorApp')
-.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
-  function($scope, $routeParams) {
-    $scope.phoneId = $routeParams.phoneId;
+.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
+  function($scope, $routeParams, Phone) {
+    $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone){
+      $scope.mainImageUrl = phone.images[0];
+    });
+
+    $scope.setImage = function(imageUrl){
+      $scope.mainImageUrl = imageUrl;
+    };
   }]);
 

@@ -9,11 +9,9 @@
  */
 
 angular.module('ehughestaylorApp')
-.controller('PhoneListCtrl', ['$scope', '$http',
-  function ($scope, $http) {
-    $http.get('phones/phones.json').success(function(data) {
-      $scope.phones = data;
-    });
+.controller('PhoneListCtrl', ['$scope', 'Phone',
+  function ($scope, Phone) {
+    $scope.phones = Phone.query();
 
     $scope.orderProp = 'age';
   }]);

@@ -22,8 +22,9 @@
 
     <!-- example to show that since this is not within the phone list controller that it does not have the same scope -->
     <!-- end example -->
-    <div ng-view></div>
-
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -52,10 +53,13 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services.js"></script>
+        <script src="scripts/animations.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/phone-detail.js"></script>
         <script src="scripts/controllers/phone-list.js"></script>
+        <script src="scripts/filters/phonefilters.js"></script>
         <!-- endbuild -->
 </body>
 </html>

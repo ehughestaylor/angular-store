@@ -15,7 +15,10 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'phonecatFilters',
+    'phonecatServices', 
+    'phonecatAnimations'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -34,7 +37,7 @@ angular
       .when('/phones', {
         templateUrl: 'partials/phone-list.html',
         controller: 'PhoneListCtrl'
-      })
+      });
   });
 
 
